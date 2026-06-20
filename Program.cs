@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Models.Entities.NhaCungCap;
+using _2526_2221050736_BaiThi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TrangLeGiangDbContext>(options =>
+builder.Services.AddDbContext<TrangLeGiangDb>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
